@@ -1,7 +1,4 @@
-
 #!/bin/bash
-
-
 # Extraccion de Tomcat
 unzip apache-tomcat-8.5.60.zip
 rm -r apache-tomcat-8.5.60/webapps
@@ -26,24 +23,3 @@ cp gson-2.3.1.jar apache-tomcat-8.5.60/lib/
 #Driver JDBC de MySQL
 unzip mysql-connector-java-8.0.22.zip
 cp  mysql-connector-java-8.0.22/mysql-connector-java-8.0.22.jar apache-tomcat-8.5.60/lib/
-
-# Actualizacion de APT
-sudo apt update
-# Instalacion de JDK 8
-sudo apt install openjdk-8-jdk-headless
-
-##### Instalacion de MySQL
-sudo apt install mysql-server
-
-# Ejecucion de script de seguridad MySQL
-sudo mysql_secure_installation
-
-
-##### Prueba del servicio web
-
-cp usuario_sin_foto.png apache-tomcat-8.5.60/webapps/
-cp prueba.html apache-tomcat-8.5.60/webapps/
-
-
-cp WSClient.js apache-tomcat-8.5.60/webapps/
-
